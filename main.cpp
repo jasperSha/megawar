@@ -6,5 +6,6 @@ int main() {
 
     std::cout << c1 << std::endl;
     std::cout << c1.getValue() << std::endl;
+    //testing
     return 0;
 }
