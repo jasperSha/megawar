@@ -41,6 +41,22 @@ std::ostream& operator<<(std::ostream& out, Card& c) {
 	return out;
 }
 
+bool operator>(const Card& first, const Card& second) {
+	return first.getValue() > second.getValue();
+}
+
+bool operator<(const Card& first, const Card& second) {
+	return first.getValue() < second.getValue();
+}
+
+bool operator==(const Card& first, const Card& second) {
+	return first.getValue() == second.getValue();
+}
+
+Card* crd_compare(const Card& first, const Card& second) {
+	
+}
+
 
 /*
 Card::Card() : rank(' '), suit(' ') {}

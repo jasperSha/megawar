@@ -4,9 +4,14 @@
 
 
 class Card {
-    public:
+    protected:
         enum class Rank {ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, End};
         enum class Suit {CLUBS, DIAMONDS, HEARTS, SPADES};
+
+        Rank rank;
+        Suit suit;
+        
+    public:
 
         Card::Rank getRank() const;
         Card::Suit getSuit() const;
@@ -28,9 +33,5 @@ class Card {
 
         ~Card() {};
 
-    protected:
-        Rank rank;
-        Suit suit;
-        
 
 };
