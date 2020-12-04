@@ -7,7 +7,7 @@ class MegaDeck {
     public:
         MegaDeck();
 
-        MegaDeck(std::vector<Deck> d);
+        MegaDeck(std::vector<Deck> d, std::vector<Player> p, std::vector<Card> md);
 
         void dealCards(); //given total number of players, then distributes decks equally among them
 

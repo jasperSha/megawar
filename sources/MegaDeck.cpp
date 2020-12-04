@@ -3,8 +3,10 @@
 
 const int CARDS_PER_DECK = 52;
 
-MegaDeck::MegaDeck(std::vector<Deck> d) {
+MegaDeck::MegaDeck(std::vector<Deck> d, std::vector<Player> p, std::vector<Card> md) {
     decks = d;
+    players = p;
+    megaDeck = md;
 }
 
 void MegaDeck::dealCards() {

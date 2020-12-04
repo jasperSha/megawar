@@ -6,6 +6,7 @@
 class CardPile {
     public:
         CardPile();
+        CardPile(std::vector<Card> cds);
 
         void add();
         Card remove();

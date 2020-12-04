@@ -5,23 +5,23 @@
 
 class Card {
     protected:
-        enum class Rank {ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, End};
-        enum class Suit {CLUBS, DIAMONDS, HEARTS, SPADES};
-
+        enum Rank {ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, RANKEND};
+        enum Suit {CLUBS, DIAMONDS, HEARTS, SPADES, SUITEND};
+        
         Rank rank;
         Suit suit;
 
 
         
     public:
+        Card();
+        Card(Rank r, Suit s);
 
         Card::Rank getRank() const;
         Card::Suit getSuit() const;
 
         std::string toString() const;
 
-        Card(Rank r, Suit s);
-        Card(int r, int s);
 
         int getValue() const;
 

@@ -1,43 +1,32 @@
-#include "Deck.h"
+#include "../headers/Deck.h"
+#include "../headers/Card.h"
+#include "time.h"
 #include <iostream>
+const int SUITS = 4;
+const int RANKS = 13;
 
-
-
-
-
-/*
 Deck::Deck() {
-	char suits[] = { 'S','H','D','C' };
-	char ranks[] = { 'A','2','3','4','5','6','7','8','9','T','J','Q','K' };
-	top = 0;
+	storage.clear();
+	for (int SuitInt = CLUBS; SuitInt != SUITEND; SuitInt++) {
+		for (int RankInt = ACE; RankInt != RANKEND; RankInt++) {
 
+			Card::Rank rank = static_cast<Card::Rank>(RankInt);
+			Card::Suit suit = static_cast<Card::Suit>(SuitInt);
+
+			Card c1(rank, suit);
+			storage.push_back(c1);
+		}	
+	}
+}
+
+void Deck::showDeck() {
+	int cardCount = storage.size();
 	int count = 0;
-	Card deckCard;
-	for (int s = 0; s < 4; s++) { // 4 suits
-		for (int r = 0; r < 13; r++) { // 4 ranks
-			deckCard = Card(ranks[r], suits[s]);
-			storage[count++] = deckCard; //from bottom up, keeping track of count in deck
-		}
+	while (count < cardCount) {
+		std::cout << storage[count++] << '\n';
 	}
 }
 
-void Deck::refreshDeck() { Deck(); }
-
-void Deck::showDeck() const {
-	int idx = 0;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 13; j++) {
-			storage[idx++].showCard();
-			cout << " ";
-		}
-
-		cout << '\n'; 
-	}
-}
-
-int Deck::cardsLeft() const { 
-	return 52 - top;
-}
 
 void Deck::shuffle() {
 	Card swap;
@@ -59,6 +48,8 @@ void Deck::shuffle() {
 	}
 }
 
-Card Deck::deal() { return storage[top++]; }
-
-*/
+Card Deck::deal() {
+	Card top = storage.back();
+	storage.pop_back();
+	return top;
+}
