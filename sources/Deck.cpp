@@ -1,9 +1,11 @@
 #include "Deck.h"
-#include <time.h>
-#include <stdlib.h>
 #include <iostream>
-using namespace std;
 
+
+
+
+
+/*
 Deck::Deck() {
 	char suits[] = { 'S','H','D','C' };
 	char ranks[] = { 'A','2','3','4','5','6','7','8','9','T','J','Q','K' };
@@ -58,3 +60,5 @@ void Deck::shuffle() {
 }
 
 Card Deck::deal() { return storage[top++]; }
+
+*/

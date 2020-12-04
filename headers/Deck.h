@@ -9,7 +9,7 @@ class Deck: public CardPile {
 		int cardsLeft() const;
 
 		void shuffle();
-		Card deal(); //extends CardPile::remove()
+		Card& deal(); //extends CardPile::remove()
 		
 		~Deck() {};
 

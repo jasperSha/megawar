@@ -10,6 +10,8 @@ class Card {
 
         Rank rank;
         Suit suit;
+
+
         
     public:
 
@@ -19,6 +21,7 @@ class Card {
         std::string toString() const;
 
         Card(Rank r, Suit s);
+        Card(int r, int s);
 
         int getValue() const;
 
@@ -26,7 +29,6 @@ class Card {
         friend bool operator<(const Card& first, const Card& second);
         friend bool operator==(const Card& first, const Card& second);
 
-        friend Card* crd_compare(const Card& first, const Card& second);
 
         friend std::ostream& operator<<(std::ostream& out, Card& c);
         

@@ -53,9 +53,6 @@ bool operator==(const Card& first, const Card& second) {
 	return first.getValue() == second.getValue();
 }
 
-Card* crd_compare(const Card& first, const Card& second) {
-	
-}
 
 
 /*
