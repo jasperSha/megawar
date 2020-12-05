@@ -3,7 +3,6 @@
 #include "Card.h"
 
 class Deck: public CardPile, Card {
-
 	public:
 		Deck(); //all decks start with full 52, they will never gain cards, only deal them.
 
@@ -11,10 +10,9 @@ class Deck: public CardPile, Card {
 		void showDeck();
 
 		void shuffle();
+
 		Card deal(); //extends CardPile::remove()
 		
 		~Deck() {};
 
-	protected:
-		std::vector<Card> storage;
 };

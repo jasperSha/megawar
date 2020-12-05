@@ -5,10 +5,9 @@
 
 class CardPile {
     public:
-        CardPile();
-        CardPile(std::vector<Card> cds);
+        CardPile() {};
 
-        void add();
+        void add(Card c);
         Card remove();
         
         int getCount() const;
@@ -16,5 +15,5 @@ class CardPile {
         ~CardPile() {};
 
     protected:
-        std::vector<Card> pile;
+        std::vector<Card> storage;
 };

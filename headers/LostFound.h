@@ -7,7 +7,7 @@ class LostFound: public CardPile {
     public:
         LostFound();
 
-        void add(); //extends CardPile::add()
+        void add(Card c); //extends CardPile::add()
 
         void reward(Player& p); //pop all cards from pile for winner, extends CardPile::remove()
 

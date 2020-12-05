@@ -21,15 +21,15 @@ void MegaDeck::dealCards() {
 
     //dividing cards equally among players requires discarding remainder
     int remainder = totalCardCount % totalPlayers;
-    totalCardCount -= remainder;
     
+    //for each deck, deal the whole deck to the one stack
     for (int i = 0; i < totalDecks; i++) {
         for (int j = 0; j < CARDS_PER_DECK; j++)
             megaDeck.push_back(decks[i].deal());
     }
 
     //get rid of extra cards
-    megaDeck.resize(totalCardCount);
+    megaDeck.resize(totalCardCount - remainder);
     
     int count = 0;
     while (count < totalCardCount) {

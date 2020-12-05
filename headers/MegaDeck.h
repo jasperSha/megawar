@@ -5,7 +5,7 @@
 
 class MegaDeck {
     public:
-        MegaDeck();
+        MegaDeck() {};
 
         MegaDeck(std::vector<Deck> d, std::vector<Player> p, std::vector<Card> md);
 

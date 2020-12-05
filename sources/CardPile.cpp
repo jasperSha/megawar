@@ -1,9 +1,15 @@
 #include "../headers/CardPile.h"
 
-CardPile::CardPile() {
-    
+void CardPile::add(Card c) {
+    storage.push_back(c);
 }
 
-CardPile::CardPile(std::vector<Card> cds) {
-    pile = cds;
+Card CardPile::remove() {
+    Card top = storage.back();
+    storage.pop_back();
+    return top;
+}
+
+int CardPile::getCount() const {
+    return storage.size();
 }

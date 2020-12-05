@@ -5,29 +5,25 @@
 class Player: public CardPile {
 
     public:
-        Player();
+        Player() {};
         Player(int id);
 
         int getPlayerID() const;
 
-        double getFierceness() const;
+        double getFierceness();
 
-        void updateStats();
-        int getBattlesPlayed() const;
-        int getBattlesWon() const;
+        void updateGameStats(bool won);
+        void getStats();
         
         int getHandCount() const; //extends CardPile::getCount() const
 
-        void receiveCard(Card& c); //extends CardPile::add()
+        void receiveCard(Card c); //extends CardPile::add()
         Card& playCard(); //extends CardPile::remove()
 
         ~Player() {};
 
     protected:
-        std::vector<Card> hand;
-
         int playerID;
-        double fierceness;
         int battlesPlayed;
         int battlesWon;
 

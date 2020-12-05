@@ -2,11 +2,8 @@
 #include "../headers/Card.h"
 #include "time.h"
 #include <iostream>
-const int SUITS = 4;
-const int RANKS = 13;
 
 Deck::Deck() {
-	storage.clear();
 	for (int SuitInt = CLUBS; SuitInt != SUITEND; SuitInt++) {
 		for (int RankInt = ACE; RankInt != RANKEND; RankInt++) {
 
@@ -49,7 +46,5 @@ void Deck::shuffle() {
 }
 
 Card Deck::deal() {
-	Card top = storage.back();
-	storage.pop_back();
-	return top;
+	CardPile::remove();
 }
