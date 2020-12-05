@@ -25,7 +25,7 @@ void MegaDeck::dealCards() {
     //for each deck, deal the whole deck to the one stack
     for (int i = 0; i < totalDecks; i++) {
         for (int j = 0; j < CARDS_PER_DECK; j++)
-            megaDeck.push_back(decks[i].deal());
+            megaDeck.push_back(decks[i].remove());
     }
 
     //get rid of extra cards
@@ -34,7 +34,7 @@ void MegaDeck::dealCards() {
     int count = 0;
     while (count < totalCardCount) {
         for (int j = 0; j < totalPlayers; j++) {
-            players[j].receiveCard(megaDeck[count++]);
+            players[j].add(megaDeck[count++]);
         }
     }
     

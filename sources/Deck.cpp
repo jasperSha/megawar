@@ -45,6 +45,10 @@ void Deck::shuffle() {
 	}
 }
 
-Card Deck::deal() {
-	CardPile::remove();
+int Deck::getCount() const {
+	return CardPile::getCount();
+}
+
+Card Deck::remove() {
+	return CardPile::remove();
 }

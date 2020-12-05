@@ -6,13 +6,11 @@ class Deck: public CardPile, Card {
 	public:
 		Deck(); //all decks start with full 52, they will never gain cards, only deal them.
 
-		int cardsLeft() const;
+		virtual int getCount() const;
 		void showDeck();
 
 		void shuffle();
 
-		Card deal(); //extends CardPile::remove()
+		virtual Card remove(); //extends CardPile::remove()
 		
-		~Deck() {};
-
 };

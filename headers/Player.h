@@ -15,12 +15,10 @@ class Player: public CardPile {
         void updateGameStats(bool won);
         void getStats();
         
-        int getHandCount() const; //extends CardPile::getCount() const
+        virtual int getCount() const; //extends CardPile::getCount() const
 
-        void receiveCard(Card c); //extends CardPile::add()
-        Card& playCard(); //extends CardPile::remove()
-
-        ~Player() {};
+        virtual void add(Card c); //extends CardPile::add()
+        virtual Card remove(); //extends CardPile::remove()
 
     protected:
         int playerID;

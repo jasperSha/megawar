@@ -10,8 +10,15 @@ int Player::getPlayerID() const {
     return playerID;
 }
 
-void Player::receiveCard(Card c) {
+int Player::getCount() const {
+    return CardPile::getCount();
+}
+
+void Player::add(Card c) {
     CardPile::add(c);
+}
+Card Player::remove() {
+    return CardPile::remove();
 }
 
 double Player::getFierceness() {
