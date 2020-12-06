@@ -39,7 +39,7 @@ Card::Suit Card::getSuit() const{
 	return this->suit;
 }
 
-std::ostream& operator<<(std::ostream& out, Card& c) {
+std::ostream& operator<<(std::ostream& out, const Card& c) {
 	out << c.toString();
 	return out;
 }

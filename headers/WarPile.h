@@ -4,4 +4,5 @@
 class WarPile: public CardPile {
     public:
         WarPile() {};
+        virtual void display() const;
 };

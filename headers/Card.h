@@ -30,7 +30,7 @@ class Card {
         friend bool operator==(const Card& first, const Card& second);
 
 
-        friend std::ostream& operator<<(std::ostream& out, Card& c);
+        friend std::ostream& operator<<(std::ostream& out, const Card& c);
         
 
         ~Card();

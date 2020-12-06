@@ -7,9 +7,12 @@ class CardPile {
     public:
         CardPile();
         virtual ~CardPile();
+        virtual void display() const = 0;
+        virtual void resize(int newCapacity);
 
-        void add(Card c);
-        Card remove();
+        virtual std::vector<Card> remove(int numCards);
+        virtual void add(std::vector<Card> pile);
+
         int getCount() const;
 
     protected:

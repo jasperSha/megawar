@@ -2,27 +2,36 @@
 #include "../headers/Card.h"
 #include "time.h"
 #include <iostream>
-
+#include <vector>
 
 Deck::Deck() {
+	std::vector<Card> pile;
 	for (int SuitInt = CLUBS; SuitInt != SUITEND; SuitInt++) {
 		for (int RankInt = ACE; RankInt != RANKEND; RankInt++) {
 
 			Card::Rank rank = static_cast<Card::Rank>(RankInt);
 			Card::Suit suit = static_cast<Card::Suit>(SuitInt);
 
-			Card c1(rank, suit);
-			add(c1);
+			Card cd(rank, suit);
+			pile.push_back(cd);
 		}	
 	}
+	CardPile::add(pile);
 }
 
-void Deck::showDeck() {
+void Deck::display() const{
 	int cardCount = storage.size();
 	int count = 0;
 	while (count < cardCount) {
 		std::cout << storage[count++] << '\n';
 	}
+}
+std::vector<Card> Deck::remove(int numCards) {
+	return CardPile::remove(1);
+}
+
+void Deck::resize(int newMaxCapacity) {
+	storage.resize(newMaxCapacity);
 }
 
 

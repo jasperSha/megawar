@@ -11,11 +11,12 @@ class Player: public CardPile {
         ~Player();
 
         int getPlayerID() const;
-        double getFierceness();
+        double getFierceness() const;
 
         void updateGameStats(bool won);
-        void getStats();
+        void getStats() const;
 
+        virtual void display() const override;
 
     protected:
         int playerID;
