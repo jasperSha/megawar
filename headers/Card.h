@@ -14,7 +14,7 @@ class Card {
 
         
     public:
-        Card();
+        Card() {};
         Card(Rank r, Suit s);
 
         Card::Rank getRank() const;

@@ -2,10 +2,7 @@
 #include <iostream>
 #include <string>
 
-Card::Card() {
-	rank = Card::Rank::ACE;
-	suit = Card::Suit::CLUBS;
-}
+
 Card::Card(Card::Rank r, Card::Suit s) {
 	rank = r;
 	suit = s;

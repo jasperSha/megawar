@@ -1,24 +1,26 @@
 #pragma once
 #include "CardPile.h"
+#include "Card.h"
 
 
 class Player: public CardPile {
 
     public:
-        Player() {};
+        Player();
         Player(int id);
 
-        int getPlayerID() const;
+        // int getPlayerID() const;
 
-        double getFierceness();
+        // double getFierceness();
 
-        void updateGameStats(bool won);
-        void getStats();
+        // void updateGameStats(bool won);
+        // void getStats();
         
-        virtual int getCount() const; //extends CardPile::getCount() const
+        // virtual int getCount() const; //extends CardPile::getCount() const
 
-        virtual void add(Card c); //extends CardPile::add()
-        virtual Card remove(); //extends CardPile::remove()
+        void add(Card c); //extends CardPile::add()
+        Card remove(); //extends CardPile::remove()
+        ~Player();
 
     protected:
         int playerID;

@@ -3,6 +3,7 @@
 #include "time.h"
 #include <iostream>
 
+
 Deck::Deck() {
 	for (int SuitInt = CLUBS; SuitInt != SUITEND; SuitInt++) {
 		for (int RankInt = ACE; RankInt != RANKEND; RankInt++) {
@@ -11,7 +12,7 @@ Deck::Deck() {
 			Card::Suit suit = static_cast<Card::Suit>(SuitInt);
 
 			Card c1(rank, suit);
-			storage.push_back(c1);
+			add(c1);
 		}	
 	}
 }
@@ -43,12 +44,4 @@ void Deck::shuffle() {
 		storage[second] = swap;
 
 	}
-}
-
-int Deck::getCount() const {
-	return CardPile::getCount();
-}
-
-Card Deck::remove() {
-	return CardPile::remove();
 }

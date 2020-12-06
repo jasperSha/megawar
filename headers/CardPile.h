@@ -5,11 +5,12 @@
 
 class CardPile {
     public:
-        CardPile() {};
+        CardPile();
+        virtual ~CardPile();
 
         virtual void add(Card c);
         virtual Card remove();
-        virtual int getCount() const;
+        // virtual int getCount() const;
 
     protected:
         std::vector<Card> storage;
