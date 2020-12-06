@@ -14,7 +14,7 @@ class Card {
 
         
     public:
-        Card() {};
+        Card();
         Card(Rank r, Suit s);
 
         Card::Rank getRank() const;
@@ -33,7 +33,7 @@ class Card {
         friend std::ostream& operator<<(std::ostream& out, Card& c);
         
 
-        ~Card() {};
+        ~Card();
 
 
 };

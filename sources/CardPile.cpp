@@ -16,7 +16,7 @@ Card CardPile::remove() {
     return top;
 }
 
-// int CardPile::getCount() const {
-//     return storage.size();
-// }
+int CardPile::getCount() const {
+    return storage.size();
+}
 

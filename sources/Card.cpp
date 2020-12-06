@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+Card::Card() {}
+Card::~Card() {}
 
 Card::Card(Card::Rank r, Card::Suit s) {
 	rank = r;

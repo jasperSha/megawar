@@ -6,14 +6,17 @@
 
 class MegaDeck: public CardPile {
     public:
-        std::vector<Deck> decks;
-        std::vector<Player> players;
-        std::vector<Card> megaDeck;
+
 
         MegaDeck() {};
 
-        MegaDeck(std::vector<Deck> d, std::vector<Player> p, std::vector<Card> md);
+        MegaDeck(std::vector<Deck> d, std::vector<Player> p);
 
         void dealCards(); //given total number of players, then distributes decks equally among them
 
+        void display();
+    protected:
+        std::vector<Deck> decks;
+        std::vector<Player> players;
+        std::vector<Card> megaDeck;
 };
