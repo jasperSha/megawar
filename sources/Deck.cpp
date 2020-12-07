@@ -16,7 +16,7 @@ Deck::Deck() {
 			pile.push_back(cd);
 		}	
 	}
-	CardPile::add(pile);
+	storage = pile;
 }
 
 void Deck::display() const{
@@ -27,11 +27,7 @@ void Deck::display() const{
 	}
 }
 std::vector<Card> Deck::remove(int numCards) {
-	return CardPile::remove(1);
-}
-
-void Deck::resize(int newMaxCapacity) {
-	storage.resize(newMaxCapacity);
+	return this->CardPile::remove(1);
 }
 
 

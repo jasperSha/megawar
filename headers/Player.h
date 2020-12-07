@@ -12,9 +12,13 @@ class Player: public CardPile {
 
         int getPlayerID() const;
         double getFierceness() const;
+        void addToFront(std::vector<Card> pile);
 
-        void updateGameStats(bool won);
+        void won();
+        void updateGameStats();
         void getStats() const;
+
+        bool available();
 
         virtual void display() const override;
 
@@ -22,5 +26,7 @@ class Player: public CardPile {
         int playerID;
         int battlesPlayed;
         int battlesWon;
+
+        bool winner;
 
 };

@@ -1,9 +1,9 @@
 #pragma once
 #include "CardPile.h"
 
-class LostFound: public CardPile {
+class LostFound: public WarPile {
     public:
-        LostFound();
+        LostFound() {}
+        ~LostFound() {}
 
-        virtual void display() const;
 };

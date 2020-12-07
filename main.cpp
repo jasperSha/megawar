@@ -18,6 +18,7 @@ MegaDeck buildGame() {
 
     std::vector<Player> players;
     std::vector<Deck> decks;
+
     for (int i = 0; i < numPlayers; i++) {
         Player p(i+1);
         players.push_back(p);
@@ -26,11 +27,11 @@ MegaDeck buildGame() {
         Deck d;
         decks.push_back(d);
     }
-    MegaDeck mega(decks, players);
 
-    
+    MegaDeck mega(decks, players);
     return mega;
 }
+
 
 
 
@@ -38,6 +39,7 @@ int main() {
     MegaDeck mega = buildGame();
     mega.dealCards();
     mega.display();
+    mega.playGame();
     std::cout << std::endl;
 
     return 0;

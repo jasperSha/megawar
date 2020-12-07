@@ -3,6 +3,8 @@
 #include "Deck.h"
 #include "Player.h"
 #include "Card.h"
+#include "WarPile.h"
+#include "LostFound.h"
 
 class MegaDeck: public CardPile {
     public:
@@ -14,6 +16,8 @@ class MegaDeck: public CardPile {
 
         void buildGame();
         void dealCards(); //given total number of players, then distributes decks equally among them
+        void playGame();
+        void war(std::vector<Player*> warMongers, WarPile& wp, LostFound& lf);
 
         virtual void display() const override;
 
