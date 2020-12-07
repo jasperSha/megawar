@@ -37,9 +37,11 @@ MegaDeck buildGame() {
 
 int main() {
     MegaDeck mega = buildGame();
+
     mega.dealCards();
     mega.display();
     mega.playGame();
+    
     std::cout << std::endl;
 
     return 0;

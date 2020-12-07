@@ -144,7 +144,7 @@ void MegaDeck::playGame() {
     int currPlayers;
     this->display();
 
-    while (!winner) {
+    while (winner == NULL) {
         //reset round
         availablePlayers.clear();
         warMongers.clear();
@@ -160,6 +160,7 @@ void MegaDeck::playGame() {
         //check if only one left, then exit with winner
         if (availablePlayers.size() == 1) {
             winner = availablePlayers[0];
+            break;
         }
 
         for (auto& p : availablePlayers) {
@@ -185,7 +186,5 @@ void MegaDeck::playGame() {
 
     std::cout << "\nThe winner was:";
     winner->getStats();
-    std::cout << std::endl;
-
 }
 

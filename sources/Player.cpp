@@ -51,11 +51,13 @@ void Player::won() {
 
 
 void Player::updateGameStats() {
-    if (winner) {
-        battlesWon++;
-        winner = false;
+    if (available()) {
+        if (winner) {
+            battlesWon++;
+            winner = false;
+        }
+        battlesPlayed++;
     }
-    battlesPlayed++;
 }
 
 void Player::getStats() const{
